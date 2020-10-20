@@ -23,6 +23,12 @@ Route::get('/', 'Auth\LoginController@showLoginForm');
 Auth::routes(); /*standar untuk login, logout, lupa password, register */
 
 Route::get('/home', 'HomeController@index')->name('home'); /*halaman dashboard */
+Route::get('/profile', 'Auth\ProfileController@index')->name('profile');
+Route::post('/profile/gantipassword', 'Auth\ProfileController@gantipassword')->name('gantipassword');
+
+
+Route::get('image-crop', 'ImageController@imageCrop');
+Route::post('image-crop', 'ImageController@imageCropPost')->name('uploadimage');
 
 
 
@@ -44,6 +50,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('user/simpanroles', ['uses' => 'Admin\UsersController@simpanrolesuser', 'as' => 'users.simpanroles']);
     Route::get('user/permissions/{user}', ['uses' => 'Admin\UsersController@permissionsuser', 'as' => 'users.permissions']);
     Route::post('user/simpanpermissions', ['uses' => 'Admin\UsersController@simpanpermissionsuser', 'as' => 'users.simpanpermissions']);
+
 
     Route::group(['prefix' => 'master', 'as' => 'master.'], function () {
 

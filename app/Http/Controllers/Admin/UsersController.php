@@ -123,19 +123,7 @@ class UsersController extends Controller
         }
     }
 
-    public function profile()
-    {
-
-        $userid = Auth::user()->id;
-
-
-        $roles = Role::get()->pluck('name', 'name');
-
-        $user = User::findOrFail($userid);
-
-        return view('admin.users.profile', compact('user', 'roles' ));
-    }
-
+    /*
     public function profileupdate(Request $request)
     {
 
@@ -148,7 +136,7 @@ class UsersController extends Controller
         return redirect()->route('admin.users.profile');
     }
 
-
+    */
 
     public function hapusdata(Request $request)
     {
@@ -399,8 +387,6 @@ class UsersController extends Controller
 
         return $result;
     }
-
-
 
 
 }

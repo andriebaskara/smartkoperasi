@@ -200,7 +200,7 @@ return [
 
     'password_email_url' => 'password/email',
 
-    'profile_url' => false,
+    'profile_url' => "profile",
 
     /*
     |--------------------------------------------------------------------------

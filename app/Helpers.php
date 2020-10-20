@@ -5,6 +5,7 @@ use App\User;
 use LaravelFCM\Message\OptionsBuilder;
 use LaravelFCM\Message\PayloadDataBuilder;
 use LaravelFCM\Message\PayloadNotificationBuilder;
+use Illuminate\Support\Str;
 use Carbon\Carbon;
 
 class Helpers {
@@ -92,7 +93,11 @@ class Helpers {
 	}
 	
 	public static function generateToken(){
-		return str_random(64);
+		return Str::random(64); 
+	}
+
+	public static function rndstr($jumlah) {
+		return Str::random($jumlah);
 	}
 
 	Public static function TokenValid(){

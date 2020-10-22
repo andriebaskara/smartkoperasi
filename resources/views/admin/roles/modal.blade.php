@@ -42,11 +42,42 @@
                             <div class="card-body">
 
                                 <label>
+                                    <input type="checkbox" class="flat-red"  id='tentang_koperasi' name='permission[]' value="tentang_koperasi"> Tentang Koperasi
+                                </label> <br>
+
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_berita' name='permission[]' value="master_berita"> Master Berita
+                                </label> <br>
+
+                                <label>
                                     <input type="checkbox" class="flat-red"  id='master_lokasi' name='permission[]' value="master_lokasi"> Master Lokasi
                                 </label> <br>
+
                                 <label>
                                     <input type="checkbox" class="flat-red"  id='master_tipe_iuran' name='permission[]' value="master_tipe_iuran"> Master Tipe Iuran
                                 </label> <br>
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_status_outlet' name='permission[]' value="master_status_outlet"> Master Status Outlet
+                                </label> <br>
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_status_penjualan' name='permission[]' value="master_status_penjualan"> Master Status Penjualan
+                                </label> <br>
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_status_produk' name='permission[]' value="master_status_produk"> Master Status Produk
+                                </label> <br>
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_status_anggota' name='permission[]' value="master_status_anggota"> Master Status Anggota
+                                </label> <br>
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_status_pengajuan' name='permission[]' value="master_status_pengajuan"> Master Status Pengajuan
+                                </label> <br>
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_kategori' name='permission[]' value="master_kategori"> Master Kategori
+                                </label> <br>
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_jenis_pembayaran' name='permission[]' value="master_jenis_pembayaran"> Master Jenis Pembayaran
+                                </label> <br>
+
                             </div>
                         </div>
 

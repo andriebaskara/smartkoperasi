@@ -153,7 +153,7 @@ class RolesController extends Controller
         $pagination = Helpers::Pagination("LoadData", $count, $take, $halaman);
         $roles = $roles->skip($skip)->take($take)->get();
 
-        $table = "<table class='table table-head-fixed text-nowrap'>
+        $table = "<table class='table table-hover'>
                   <thead>
                     <tr>
                         <th style=\"text-align:center;\">

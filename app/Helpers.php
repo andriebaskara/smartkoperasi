@@ -2,6 +2,7 @@
 namespace App;
 
 use App\User;
+use Auth;
 use LaravelFCM\Message\OptionsBuilder;
 use LaravelFCM\Message\PayloadDataBuilder;
 use LaravelFCM\Message\PayloadNotificationBuilder;
@@ -91,6 +92,37 @@ class Helpers {
 				'message'	=> $message,
 			))->setStatusCode($code);
 	}
+
+	public static function responseFailed($message = NULL, $data = NULL, $code=400) {
+		$instance = new Helpers;
+		return $instance->responseJson($data, $message, false, $code);
+	}
+
+
+    public static function Response($request, $success, $data, $message, $code)
+    {
+        /*digunakan untuk route API */
+        $rv = array(
+                'success'   => $success,
+                'data'      => $data,
+                'message'   => $message,
+            );        
+
+        $js =  json_encode($rv);
+        $rq =  json_encode($request->all());
+        $url = $request->fullUrl();
+
+        /* untuk menyimpan data request dan result api */
+        /*
+        T_Api_log::create([
+                    'url' => $url,
+                    'request' => $rq,
+                    'result' => $js,
+                    ]);
+        */
+                    
+        return response()->json($rv)->setStatusCode($code);
+    }
 	
 	public static function generateToken(){
 		return Str::random(64); 
@@ -194,7 +226,18 @@ class Helpers {
 		/*pagination */
 		
 		return $pagination;
-
 	}
+
+	public static function Warna() {
+        $warna = Array();
+        $warna['HIJAU']     = "btn-success";
+        $warna['MERAH']     = "btn-danger";
+        $warna['ORANGE']    = "btn-warning";
+        $warna['BIRU']      = "btn-primary";
+        $warna['BIRU MUDA'] = "btn-info";
+        $warna['ABU-ABU'] 	= "btn-secondary";
+
+        return $warna;
+    }
 
 }

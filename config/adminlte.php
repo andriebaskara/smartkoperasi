@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Koperasi Admin',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Koperasi </b>Permata',
+    'logo_img' => 'img/logo512.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -194,7 +194,7 @@ return [
 
     'login_url' => 'login',
 
-    'register_url' => 'register',
+    'register_url' => false,
 
     'password_reset_url' => 'password/reset',
 
@@ -249,8 +249,18 @@ return [
 
         [
             'text' => 'Master Data',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-cubes',
             'submenu' => [
+                [
+                    'text' => 'Tentang Koperasi',
+                    'url'  => 'admin/master/tentangkoperasi',
+                    'can'  => 'tentang_koperasi',
+                ],
+                [
+                    'text' => 'Master Berita',
+                    'url'  => 'admin/master/berita',
+                    'can'  => 'master_berita',
+                ],
                 [
                     'text' => 'Master Lokasi',
                     'url'  => 'admin/master/lokasi',
@@ -260,6 +270,41 @@ return [
                     'text' => 'Master Tipe Iuran',
                     'url'  => 'admin/master/tipe_iuran',
                     'can'  => 'master_tipe_iuran',
+                ],
+                [
+                    'text' => 'Master Kategori',
+                    'url'  => 'admin/master/kategori',
+                    'can'  => 'master_kategori',
+                ],
+                [
+                    'text' => 'Master Jenis Pembayaran',
+                    'url'  => 'admin/master/jenis_pembayaran',
+                    'can'  => 'master_jenis_pembayaran',
+                ],
+                [
+                    'text' => 'Master Status Outlet',
+                    'url'  => 'admin/master/status_outlet',
+                    'can'  => 'master_status_outlet',
+                ],
+                [
+                    'text' => 'Master Status Penjualan',
+                    'url'  => 'admin/master/status_penjualan',
+                    'can'  => 'master_status_penjualan',
+                ],
+                [
+                    'text' => 'Master Status Produk',
+                    'url'  => 'admin/master/status_produk',
+                    'can'  => 'master_status_produk',
+                ],
+                [
+                    'text' => 'Master Status Anggota',
+                    'url'  => 'admin/master/status_anggota',
+                    'can'  => 'master_status_anggota',
+                ],
+                [
+                    'text' => 'Master Status Pengajuan',
+                    'url'  => 'admin/master/status_pengajuan',
+                    'can'  => 'master_status_pengajuan',
                 ],
             ],
         ],

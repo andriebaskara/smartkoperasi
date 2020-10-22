@@ -21,3 +21,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 */
+
+Route::group(['middleware' => ['api', 'public'], 'prefix' => '/v1', 'namespace' => 'Api\V1', 'as' => 'api.'], function () {
+
+
+	Route::post('register', ['uses' => 'RegisterController@register', 'as' => 'register']);
+	
+	Route::group(['middleware' => ['anggota']], function () {
+
+
+
+	});
+
+
+});

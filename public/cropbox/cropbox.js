@@ -27,10 +27,6 @@ var cropbox = function(options){
                 sh = parseInt(this.image.height),
                 sw = parseInt(this.image.width);
 
-                dx = 50;
-                dy = 50;
-
-
             canvas.width = width;
             canvas.height = height;
             var context = canvas.getContext("2d");

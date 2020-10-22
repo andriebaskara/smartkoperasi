@@ -93,50 +93,6 @@ class UsersController extends Controller
 
     }
 
-    public function destroy($id)
-    {
-        if (! Gate::allows('user_security')) {
-            return abort(401);
-        }
-        $user = User::findOrFail($id);
-        $user->delete();
-
-        return redirect()->route('admin.users.index');
-    }
-
-    /**
-     * Delete all selected User at once.
-     *
-     * @param Request $request
-     */
-    public function massDestroy(Request $request)
-    {
-        if (! Gate::allows('user_security')) {
-            return abort(401);
-        }
-        if ($request->input('ids')) {
-            $entries = User::whereIn('id', $request->input('ids'))->get();
-
-            foreach ($entries as $entry) {
-                $entry->delete();
-            }
-        }
-    }
-
-    /*
-    public function profileupdate(Request $request)
-    {
-
-        $id = Auth::user()->id;
-
-
-        $user = User::findOrFail($id);
-        $user->update($request->all());
-
-        return redirect()->route('admin.users.profile');
-    }
-
-    */
 
     public function hapusdata(Request $request)
     {

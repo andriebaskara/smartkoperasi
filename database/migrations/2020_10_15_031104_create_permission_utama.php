@@ -45,6 +45,31 @@ class CreatePermissionUtama extends Migration
          Permission::create([
                         'name' => 'master_jenis_pembayaran'
                         ]);    
+
+
+         Permission::create([
+                        'name' => 'approval_anggota'
+                        ]);
+         Permission::create([
+                        'name' => 'approval_pinjaman'
+                        ]);
+         Permission::create([
+                        'name' => 'approval_outlet'
+                        ]);
+         Permission::create([
+                        'name' => 'approval_produk'
+                        ]);
+
+
+         Permission::create([
+                        'name' => 'tentang_koperasi'
+                        ]);
+
+         Permission::create([
+                        'name' => 'master_berita'
+                        ]);
+
+         
     }
 
     /**

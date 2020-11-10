@@ -262,6 +262,11 @@ return [
                     'can'  => 'master_berita',
                 ],
                 [
+                    'text' => 'Master Agenda',
+                    'url'  => 'admin/master/agenda',
+                    'can'  => 'master_agenda',
+                ],
+                [
                     'text' => 'Master Lokasi',
                     'url'  => 'admin/master/lokasi',
                     'can'  => 'master_lokasi',
@@ -309,6 +314,18 @@ return [
             ],
         ],
 
+        [
+            'text' => 'Approval',
+            'icon' => 'fas fa-fw fa-cubes',
+            'submenu' => [
+                [
+                    'text' => 'Anggota',
+                    'url'  => 'admin/approval/anggota',
+                    'can'  => 'approval_anggota',
+                ],
+  
+            ],
+        ],
     ],
 
     /*

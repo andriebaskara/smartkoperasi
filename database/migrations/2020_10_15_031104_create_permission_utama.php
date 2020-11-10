@@ -68,6 +68,9 @@ class CreatePermissionUtama extends Migration
          Permission::create([
                         'name' => 'master_berita'
                         ]);
+         Permission::create([
+                        'name' => 'master_agenda'
+                        ]);
 
          
     }

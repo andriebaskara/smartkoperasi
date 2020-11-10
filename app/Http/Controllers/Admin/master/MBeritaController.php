@@ -9,6 +9,9 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
+
 use Auth;
 use DB;
 use Form;
@@ -237,9 +240,12 @@ class MBeritaController extends Controller
             if ($request->hasFile('image')) {
 
                 $image = $request->file('image');
-                $destinationPath = env('LOKASI_DOKUMEN'); 
+                //$destinationPath = env('LOKASI_DOKUMEN'); 
 
-                $image->move($destinationPath, $namafile);
+                $filename = $image->storeAs(
+                            'public/berita', $namafile
+                        );
+
             }
 
             return Helpers::responseJson( true, "OK" , "OK");

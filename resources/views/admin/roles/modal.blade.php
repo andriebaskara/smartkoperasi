@@ -32,6 +32,21 @@
                             </div>
                         </div>
 
+
+                        <div class="card card-outline card-primary">
+                            <div class="card-header">
+                                Approval
+                            </div>
+
+                            <div class="card-body">
+
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='approval_anggota' name='permission[]' value="approval_anggota"> Approval Anggota
+                                </label> <br>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="col-md-6">
                         <div class="card card-outline card-primary">
@@ -47,6 +62,10 @@
 
                                 <label>
                                     <input type="checkbox" class="flat-red"  id='master_berita' name='permission[]' value="master_berita"> Master Berita
+                                </label> <br>
+
+                                <label>
+                                    <input type="checkbox" class="flat-red"  id='master_agenda' name='permission[]' value="master_agenda"> Master Agenda
                                 </label> <br>
 
                                 <label>

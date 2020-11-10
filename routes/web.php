@@ -51,8 +51,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::get('user/permissions/{user}', ['uses' => 'Admin\UsersController@permissionsuser', 'as' => 'users.permissions']);
     Route::post('user/simpanpermissions', ['uses' => 'Admin\UsersController@simpanpermissionsuser', 'as' => 'users.simpanpermissions']);
 
-
-
     Route::group(['prefix' => 'master', 'as' => 'master.'], function () {
 
 
@@ -122,18 +120,31 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
         //Tentang Koperasi        
         Route::get('tentangkoperasi', ['uses' => 'Admin\Master\TentangKoperasiController@index', 'as' => 'tentangkoperasi.index']);
-        Route::post('tentangkoperasi/simpanfile', ['uses' => 'Admin\Master\TentangKoperasiController@simpanfile', 'as' => 'tentangkoperasi.simpanfile']);
-       Route::get('tentangkoperasi/downloadfile/{id}', ['uses' => 'Admin\Master\TentangKoperasiController@downloadfile', 'as' => 'tentangkoperasi.downloadfile']);
+        Route::post('tentangkoperasi/simpangambar', ['uses' => 'Admin\Master\TentangKoperasiController@simpangambar', 'as' => 'tentangkoperasi.simpangambar']);
+        Route::get('tentangkoperasi/downloadfile/{id}', ['uses' => 'Admin\Master\TentangKoperasiController@downloadfile', 'as' => 'tentangkoperasi.downloadfile']);
         Route::get('tentangkoperasi/tampilfile/{id}', ['uses' => 'Admin\Master\TentangKoperasiController@tampilfile', 'as' => 'tentangkoperasi.tampilfile']);
+        Route::post('tentangkoperasi/hapusfile', ['uses' => 'Admin\Master\TentangKoperasiController@hapusfile', 'as' => 'tentangkoperasi.hapusfile']);
+        Route::post('tentangkoperasi/naikurutan', ['uses' => 'Admin\Master\TentangKoperasiController@naikurutan', 'as' => 'tentangkoperasi.naikurutan']);
+        Route::post('tentangkoperasi/turunurutan', ['uses' => 'Admin\Master\TentangKoperasiController@turunurutan', 'as' => 'tentangkoperasi.turunurutan']);
+
+
+
+        //agenda
+        Route::resource('agenda', 'Admin\Master\MAgendaController');
+        Route::post('agenda_loaddatatable', ['uses' => 'Admin\Master\MAgendaController@loaddatatable', 'as' => 'agenda.loaddatatable']);
+        Route::post('agenda_hapusdata', ['uses' => 'Admin\Master\MAgendaController@hapusdata', 'as' => 'agenda.hapusdata']);
+        Route::post('agenda_hapusdipilih', ['uses' => 'Admin\Master\MAgendaController@hapusdipilih', 'as' => 'agenda.hapusdipilih']);
+        Route::post('agenda-simpangambar', ['uses' => 'Admin\Master\MAgendaController@simpangambar', 'as' => 'agenda.simpangambar']);
+
+
  
     });
 
     Route::group(['prefix' => 'approval', 'as' => 'approval.'], function () {
-      /*
+      
         //anggota
         Route::resource('anggota', 'Admin\Approval\AAnggotaController');
-        Route::post('anggota-datatable', ['uses' => 'Admin\Approval\AAnggotaController@datatable', 'as' => 'anggota.datatable']);
-        */
+        Route::post('anggota-loaddatatable', ['uses' => 'Admin\Approval\AAnggotaController@loaddatatable', 'as' => 'anggota.loaddatatable']);
 
     });
 

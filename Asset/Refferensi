@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/32802592/how-to-use-google-cloud-storage-as-laravel-5-filesystem
+
+https://laravel.com/docs/5.6/filesystem#storing-files
+
+https://stackoverflow.com/questions/57177524/laravel-how-to-access-stored-image-from-google-cloud-storage-using-php-laravel
+
+https://cloud.google.com/storage/docs/access-control/signed-urls#credential-scope
+https://cloud.google.com/storage/docs/access-control/signing-urls-manually

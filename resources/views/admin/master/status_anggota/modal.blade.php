@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-md-6 form-group" id='nama_role'>
                         <p><b>Status Penjualan</b></p>
-                        <input type="text" class="form-control" id='deskripsi' name='deskripsi' placeholder='Status Penjualan', maxlength=30>
+                        <input type="text" class="form-control" id='deskripsi' name='deskripsi' placeholder='Status Anggota', maxlength=30>
                     </div>
                     <div class="col-md-6 form-group">
                         <p><b>Warna</b></p>
